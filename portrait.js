@@ -1,14 +1,16 @@
 
-let yearBirth = prompt("Введіть ваш рік народження", "");
-let city = prompt("Введіть назву міста, в якому ви живете", "");
-let favouriteSport = prompt("Введіть улюбленний вид спорту", "");
-let age = null;
+const yearBirth = prompt("Введіть ваш рік народження", "");
+const city = prompt("Введіть назву міста, в якому ви живете", "");
+const favouriteSport = prompt("Введіть улюбленний вид спорту", "");
+const age = null;
 
+let capital = "";
+let choosenSport = "";
 
 if (null === yearBirth) {
     alert("Шкода, що Ви не хочете сказати скільки Вам рочків. Я знаю, що багато...");
 } else {
-    age = 2023 - yearBirth
+    age = 2023 - yearBirth;
 }
 
 switch (city) {
