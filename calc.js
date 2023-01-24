@@ -1,7 +1,7 @@
 
 const opt = String(prompt ("выберите одну из функций: add, sub, mult, div", "")) ;
-let num1 = Number(prompt ("введите первое число", 1));
-let num2 = Number(prompt ("введите второе число", 2));
+const num1 = Number(prompt ("введите первое число", 1));
+const num2 = Number(prompt ("введите второе число", 2));
 
 
 let result = "";
