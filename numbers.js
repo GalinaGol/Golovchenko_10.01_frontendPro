@@ -1,8 +1,8 @@
 // Завдання 1
 
-let firstWord = prompt (String ("введіть перше слово"));
-let secondWord = prompt (String("введіть друге слово"));
-let thirdWord = prompt (String("введіть третє слово"));
+let firstWord = prompt (String ("введіть перше слово", ""));
+let secondWord = prompt (String("введіть друге слово", ""));
+let thirdWord = prompt (String("введіть третє слово", ""));
 console.log(firstWord+secondWord+thirdWord);
 
 
