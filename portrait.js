@@ -2,7 +2,7 @@
 const yearBirth = prompt("Введіть ваш рік народження", "");
 const city = prompt("Введіть назву міста, в якому ви живете", "");
 const favouriteSport = prompt("Введіть улюбленний вид спорту", "");
-const age = null;
+let age = null;
 
 let capital = "";
 let choosenSport = "";
