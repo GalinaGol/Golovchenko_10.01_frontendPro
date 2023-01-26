@@ -13,15 +13,8 @@ console.log(reducedArray)
 // Знайти мінімальний елемент масиву та його порядковий номер.
 // Знайти максимальний елемент масиву та його порядковий номер.
 
-const maxNumber = (a, b) => {
-  return a > b ? a : b;
-},
-  minNumber = (a, b) => {
-      return a < b ? a : b
-  };
-
-console.log(arr.reduce(maxNumber), (arr.indexOf(76)+1));
-console.log(arr.reduce(minNumber), (arr.indexOf(-63)+1));
+console.log(Math.max(...arr), (arr.indexOf(76)+1));
+console.log(Math.min(...arr), (arr.indexOf(-63)+1));
 
 // Визначити кількість негативних елементів.
 
@@ -54,7 +47,7 @@ console.log(multArray)
 
 // Знайти найбільший серед елементів масиву, остальні обнулити.
 
-maxEl = (arr.reduce(maxNumber));
+const maxEl = Math.max(...arr);
 
 const newArr = arr.map((el) => {
   if(el < maxEl){
