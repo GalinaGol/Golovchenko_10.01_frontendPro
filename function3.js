@@ -86,7 +86,7 @@ function textCleaner(text, symbolsToRemove) {
   for (let i = 0; i < symbolsToRemove.length; i++) {
      text = text.replace(symbolsToRemove[i], '');
   }
-
+  
   return text;
 }
 
