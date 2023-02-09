@@ -6,53 +6,53 @@ for( let i = 20; i<= 30; i+=0.5) {
 
 // 2.Один долар коштує 27 гривень. Вивести дані з розрахунком вартості 10, 20, 30... 100 доларів.
 
-// let result = '';
+let result2 = '';
 
-// for( let i = 10; i<= 100; i+= 10){
-//   result += `${i * 27} доларів ` ;
-// }
-// console.log(result);
+for( let i = 10; i<= 100; i+= 10){
+  result2 += `${i * 27} доларів ` ;
+}
+console.log(result2);
 
 // 3.Дане ціле число. Вивести всі цілі числа від 1 до 100, квадрат яких не перевищує числа N
 
-// let n = 895;
-// let result = '';
+let num3 = 56;
+let result3 = '';
 
-// for( let i = 1; i<= 100; i++){
-//   if( Math.pow(i, 2)< n){
-//     result+= `${i} `;
-//   }
-// }
-// console.log(result);
+for( let i = 1; i<= 100; i++){
+  if( Math.pow(i, 2)< num3){
+    result3 += `${i} `;
+  }
+}
+console.log(result3);
 
 // 4.Дане ціле число. З'ясувати, чи є воно простим (простим називається число, більше 1, які не мають інших дільників крім 1 і себе).
 
-// let n = 12;
 
-// cheking:
-// for (let i = 2; i <= n; i++) { 
-//   for (let j = 2; j < i; j++) { 
-//     if (i % j == 0) continue cheking ; 
-//   }
-//   console.log(i); 
-// }
+const simpleNumber = Number(prompt("Введіть число", ""));
+let isSimple = 'Це просте число';
+
+for (let i = 2; i <= simpleNumber; i++) {
+  if (simpleNumber % i === 0 && simpleNumber !== i && simpleNumber !== 1) {
+    isSimple = 'Це не просте число';
+}}
+console.log(isSimple);
 
 // 5.Дане деяке число. Визначити, чи можна одержати це число шляхом зведення числа 3 у деякий ступінь. 
 // (Наприклад, числа 9, 81 можна отримати, а 13 - не можна).
 
 
-// let n = prompt('введіть своє число');
+let num5 = 81;
 
-// if (n >= 3) {
-//   while(n > 1) {
-//     n = n / 3;
+if (num5 >= 3) {
+  while(num5 > 1) {
+    num5 = num5 / 3;
   
-//     if (1 === n) {
-//       alert("З твого числа можна розрахувати кубічний корінь");
-//     } else if (1 > n) {
-//       alert(" Не підходить");
-//     }
-//   }
-// } else {
-//   alert("Це число менше ніж 3");
-// }
+    if (1 === num5) {
+      console.log("З твого числа можна розрахувати кубічний корінь");
+    } else if (1 > num5) {
+      console.log(" Не підходить");
+    }
+  }
+} else {
+  console.log("Це число менше ніж 3");
+}
