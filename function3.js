@@ -4,20 +4,13 @@
 
 const firstArray = [1, "a", 54, "asd", 4, "why", 65];
 
-function findNumber (item){
+const onlyNum = firstArray.filter((item) => typeof item === "number");
 
-  let onlyNum = firstArray.filter(item => typeof item === "number")
-  return onlyNum
-}
-findNumber(firstArray)
-
-const numbers = findNumber()
-
-function findAverange (num){
-  return num.reduce((a, b) => (a + b)) / num.length;
+function findAverange(num) {
+  return num.reduce((a, b) => a + b) / num.length;
 }
 
-console.log(findAverange(numbers))
+console.log(findAverange(onlyNum));
 
 // 2.Написати функцію doMath(x, znak, y), яка отримує 3 аргументи: числа x і y, рядок znak. 
 // У змінній znak може бути: +, -, *, /, %, ^ (ступінь ).
@@ -26,7 +19,7 @@ console.log(findAverange(numbers))
 
 const x = Number(prompt('Введіть перше число', 1));
 const y = Number(prompt('Введіть друге число', 2));
-const znak = String(prompt('Оберіть дію:+, -, *, /, %, ^', '+'));
+const znak = prompt('Оберіть дію:+, -, *, /, %, ^', '+');
 
 function doMath(x, znak, y){
 
@@ -59,20 +52,21 @@ console.log(doMath(x, znak, y));
 
 const firstLenght = Number(prompt('Введіть довжину основного массиву', 3));
 const secondLenght = Number(prompt('Введіть довжину вкладеного массиву', 3));
+const elementUser = Number(prompt('Введіть елемент массиву', 5));
 
-function createMatrix(firstLenght, secondLenght) {
+function createMatrix(firstLenght, secondLenght, elementUser) {
   const mainArray  = [];
   for (let i = 0; i < firstLenght; i++ ) {
     const secArray = [];
     for (let j = 0; j < secondLenght; j++) {
-      secArray.push(j)
+      secArray.push(elementUser)
     }
     mainArray.push(secArray);
   }
   return mainArray
 }
 
-console.log(createMatrix(firstLenght ,secondLenght));
+console.log(createMatrix(firstLenght ,secondLenght, elementUser));
 
 
 //4. Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом. 
