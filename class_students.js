@@ -3,7 +3,7 @@ let currentYear = 2023
 class Student {
 
   age = 0
-  attending = []
+  attending = new Array(25)
   resultGrades = 0
   resultAttends = 0
 
@@ -18,18 +18,20 @@ class Student {
   }
 
   isPresent() {
-    if(this.attending.length < 25) {
-      this.attending.push(true)
-    } else {
-      console.log("Досить, вже відходив своє")
+    for (let i = 0; i < this.attending.length; i++) {
+      if (this.attending[i] === undefined) {
+        this.attending[i] = true;
+        break;
+      }
     }
   }
 
   isAbsent() {
-    if(this.attending.length < 25) {
-      this.attending.push(false)
-    } else {
-      console.log("Досить, вже відходив своє")
+    for (let i = 0; i < this.attending.length; i++) {
+      if (this.attending[i] === undefined) {
+        this.attending[i] = false;
+        break;
+      }
     }
   }
 
