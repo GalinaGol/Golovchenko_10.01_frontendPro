@@ -1,0 +1,53 @@
+.btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-container {
+    padding: 0;
+    margin: 70px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btn-container > li {
+    padding: 6px;
+}
+
+.green {
+    background-color: rgb(93, 175, 38);
+    border-color: rgb(93, 175, 38);
+    color: #000;
+    border: 1px solid rgb(93, 175, 38);
+}
+
+.orange {
+    background: #ff6336;
+    color: #fff;
+}
+
+.small {
+    min-height: 45px;
+    min-width: 120px;
+    padding: 32px 0 12px;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+  .hvr-grow:hover{
+    transform: scale(1.1);
+}
+
+li{
+    list-style: none;
+}
