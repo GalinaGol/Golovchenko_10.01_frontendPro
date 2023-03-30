@@ -1,0 +1,32 @@
+*{
+    font-family: 'Changa One', cursive;
+    font-size :70px;
+}
+
+body{
+    background: radial-gradient(circle, rgba(251,178,63,1) 0%, rgba(70,118,252,1) 100%);
+}
+
+.wrapper{
+    margin: 20px 30px;
+}
+
+img{
+    width: 70%;
+}
+
+.emoji-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.emoji-item__counter,
+.emoji-item{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    margin: 110px 40px;
+}
