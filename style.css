@@ -1,0 +1,16 @@
+body{
+background-image: url(./images/yellow_bg.jpg);
+}
+
+.container{
+    max-width: 900px;
+}
+
+
+li{
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+}
