@@ -1,0 +1,41 @@
+#weather-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Optional: add styles for hover or other interactions */
+#weather-block:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 50px;
+}
