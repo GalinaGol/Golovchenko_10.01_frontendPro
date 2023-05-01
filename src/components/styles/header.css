@@ -1,0 +1,20 @@
+.Header-container{
+    font-size: 36px;
+    color:  #1877f2;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: aquamarine;
+    padding: 20px 0;
+    font-family: 'Oleo Script', cursive;
+
+    background-color: #fff; 
+    padding: 12px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06); 
+
+}
+
+
+h1{
+    margin: 0;
+}

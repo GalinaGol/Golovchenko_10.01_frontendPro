@@ -1,0 +1,16 @@
+ .App {
+  width: 100%;
+}
+
+body{
+  background-color: rgb(217, 225, 225);
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  background-color: #f0f2f5; 
+  color: #1c1e21; 
+}
+
+
+.central-block{
+  display: flex;
+}
