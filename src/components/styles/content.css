@@ -1,0 +1,27 @@
+.Content-container{
+    width: 65%;
+    padding: 10px 10px;
+}
+
+.avatar{
+    width: 50%;
+    border-radius: 5px;
+}
+
+.info-container{
+    display: flex;
+}
+
+p{
+    margin: 0;
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #1c1e21;
+    margin-bottom: 12px;
+      
+}
+
+h2{
+    margin: 0 0 20px;
+    color: #0a42bb;
+}
