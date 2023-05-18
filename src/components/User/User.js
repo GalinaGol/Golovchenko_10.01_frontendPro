@@ -25,13 +25,14 @@ const User = () => {
           <button className="button" onClick={handleChangeButton}>
           Close Albums
           </button>
+          <Album userid = {user.id}/>
         </div>
       ) : (
         <div>
           <button className="button" onClick={handleChangeButton}>
           Show Albums
           </button>
-          <Album userid = {user.id}/>
+
         </div>
       )}
     </div>

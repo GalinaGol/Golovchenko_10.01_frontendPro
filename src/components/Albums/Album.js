@@ -1,27 +1,29 @@
-import React, { useEffect, useState, useParams } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 function Album(props) {
-  const [album, setAlbum] = useState(null);
+  const [albums, setAlbums] = useState([]);
   const { albumId } = useParams();
 
   useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/albums/${albumId}`).then((response) => {
-      setAlbum(response.data);
+    axios.get('https://jsonplaceholder.typicode.com/albums/').then((response) => {
+      setAlbums(response.data);
     });
   }, [albumId]);
 
+  const filteredAlbums = albums.filter((album) => album.userId === props.userid);
+
   return (
-     props.userid === album.userId ? (
-      <div>
-        {album.map((album) => (
-          <div key={album?.id} title={album?.title}>
-            {album.title}
-          </div>
-        ))}
-      </div>
-    ) : null
+    <div>
+      {filteredAlbums.map((album) => (
+        <div key={album.id}>
+          {album.title}
+        </div>
+      ))}
+    </div>
   );
 }
 
 export default Album;
+
