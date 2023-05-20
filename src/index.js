@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Album from './components/Albums/Album';
 import Dashboard from './components/Dashboard/Dashboard';
+import Photo from './components/Photo/Photo';
 import User from './components/User/User';
 
 import './index.css';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "album/:albumId",
     element: <Album />
+  },
+  {
+    path: "photo/:photoId",
+    element: <Photo />
   },
 ]);
 
