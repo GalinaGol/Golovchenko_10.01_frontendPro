@@ -1,28 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
-import axios from 'axios';
+import React, { useEffect, useState } from 'react'; 
+import axios from 'axios'; 
+import { useParams } from 'react-router-dom'; 
+import '../Photo/photo.css';
 
-function Photo(props) {
-  const [photos, setPhotos] = useState([]);
-  const { photoId } = useParams();
-
-  useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/photos/`).then((response) => {
-      setPhotos(response.data);
-    });
-  }, [photoId]);
-
-  const filteredPhotos = photos.filter((photo) => photo.albumId === props.albumid);
-
-  return (
-    <div>
-      {filteredPhotos.map((photo) => (
-        <div key={photo.id}>
-        <img src={photo.url} alt={photo.id} />
-        </div>
-      ))}
-    </div>
-  );
-}
-
+ 
+const Photo = () => { 
+  const { albumId } = useParams(); 
+  const [photos, setPhotos] = useState([]); 
+  const [isLoaded, setIsLoaded] = useState(true); 
+ 
+  useEffect(() => { 
+    axios.get(`https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`).then((res) => { 
+      setPhotos(res.data); 
+    }); 
+    setIsLoaded(false); 
+  }, [albumId]); 
+ 
+  return ( 
+    <div className='main'> 
+      {isLoaded ? ( 
+        <div className='loader'></div> 
+      ) : ( 
+        photos.map((photo) => ( 
+          <div className='main-info photo' key={photo.id}> 
+            <img className='img' src={photo.url} alt={photo.title} /> 
+            <p className='img-text'>{photo.title}</p> 
+          </div> 
+        )) 
+      )} 
+    </div> 
+  ); 
+}; 
+ 
 export default Photo;

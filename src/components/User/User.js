@@ -1,46 +1,39 @@
-import React, { useState } from 'react';
-import useUser from "./useUser";
-import { useParams } from "react-router-dom";
-import Album from '../Albums/Album';
-
-import '../styles/user.css';
-
-const User = () => {
-  const { userId } = useParams();
-  const { user } = useUser(userId);
-  const [buttonShow, setButtonShow] = useState(false);
-  
-  if (!user) {
-    return <div>Loading...</div>;
-  }
-
-  const handleChangeButton = () => {
-    setButtonShow(!buttonShow);
-  };
-
-  return (
-    <div className='user-item'>
-      <h2>About User</h2>
-      <div className='user-info'>name: {user?.name}</div>
-      <div className='user-info'>username: {user?.username}</div>
-      <div className='user-info'> email: {user?.email}</div>
-      {buttonShow ? (
-        <div className='album-wrap'>
-          <button className="button" onClick={handleChangeButton}>
-          Close Albums
-          </button>
-          <Album userid = {user.id}/>
-        </div>
-      ) : (
-        <div className='album-wrap'>
-          <button className="button" onClick={handleChangeButton}>
-          Show Albums
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
-
-
+import axios from 'axios'; 
+import React, { useState, useEffect } from 'react'; 
+import { Link } from 'react-router-dom'; 
+import '../User/user.css';
+ 
+const User = () => { 
+  const [users, setUsers] = useState([]); 
+  const [isLoaded, setIsLoaded] = useState(true); 
+ 
+  useEffect(() => { 
+    axios.get('https://jsonplaceholder.typicode.com/users').then((response) => { 
+      setUsers(response.data); 
+    }); 
+    setIsLoaded(false); 
+  }, []); 
+ 
+  return ( 
+    <div className='main'> 
+      {isLoaded ? ( 
+        <div className='loader'></div> 
+      ) : ( 
+        users.map((user) => ( 
+          <div className='main-info' key={user.id}> 
+            <div> 
+              <h3>{user.name}</h3> 
+              <p>Username: {user.username}</p> 
+              <p>Email: {user.email}</p> 
+            </div> 
+            <Link to={`/users/${user.id}/albums`} className='link-btn'> 
+              Albums 
+            </Link> 
+          </div> 
+        )) 
+      )} 
+    </div> 
+  ); 
+}; 
+ 
 export default User;

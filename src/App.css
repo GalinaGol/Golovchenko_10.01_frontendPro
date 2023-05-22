@@ -2,10 +2,14 @@
   width: 100%;
 }
 
+img {
+  width: 100%;
+}
+
 body{
   width: 100%;
-  background-color: rgb(234, 202, 152);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  background-color: white;
+  font-family: 'Ysabeau', sans-serif;; 
   color: #1c1e21; 
 }
 
