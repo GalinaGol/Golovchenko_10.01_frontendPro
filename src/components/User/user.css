@@ -1,0 +1,24 @@
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
+}
+.main-info{
+    background-color: rgb(223, 214, 214);
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin:0 10px
+}
+
+h3{
+    padding: 0;
+}
+
+.link-btn{
+    text-decoration: none;
+    padding: 6px 10px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
